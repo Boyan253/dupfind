@@ -14,3 +14,12 @@ Downloads folder. `dupfind` only hashes what it has to.
 3. Only for files that still match, hash the **whole file**.
 
 Most files are eliminated in step one, having been read zero times.
+
+## Usage
+
+```
+python dupfind.py ~/Downloads
+python dupfind.py D:/Media --min 10MB
+python dupfind.py . --delete-extra --dry-run    # see what would go
+python dupfind.py . --delete-extra              # actually delete
+```
