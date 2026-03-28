@@ -41,3 +41,10 @@ The first file in each group is kept. Always run `--dry-run` first.
 
 - Symlinks are skipped, so nothing gets deleted through an alias.
 - Uses BLAKE2b, which is faster than SHA-256 and fine for equality checks.
+
+## Tests
+
+```
+pip install pytest
+pytest
+```
