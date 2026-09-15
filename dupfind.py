@@ -6,6 +6,8 @@ import hashlib
 import os
 import sys
 
+__version__ = "0.1.0"
+
 CHUNK = 1 << 20
 
 
@@ -77,6 +79,8 @@ def parse_size(text):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--version", action="version",
+                    version="%(prog)s " + __version__)
     ap.add_argument("path", nargs="?", default=".")
     ap.add_argument("--min", default="1KB", help="ignore files smaller than this")
     ap.add_argument("--delete-extra", action="store_true",
